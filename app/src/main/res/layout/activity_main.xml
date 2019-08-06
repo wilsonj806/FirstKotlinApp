@@ -21,8 +21,14 @@
 
   </android.support.design.widget.AppBarLayout>
 
-  <include layout="@layout/content_main"/>
+  <include layout="@layout/content_main" android:id="@+id/include"/>
 
+  <TextView
+      android:text="@string/init_text_view"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" android:id="@+id/textView" tools:text="Hello World"
+      app:layout_anchorGravity="center" app:layout_anchor="@+id/include" android:typeface="serif"
+      android:textSize="36sp" android:textColor="@android:color/holo_orange_light" android:textStyle="bold"/>
   <android.support.design.widget.FloatingActionButton
       android:id="@+id/fab"
       android:layout_width="wrap_content"

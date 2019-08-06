@@ -1,4 +1,5 @@
 <resources>
   <string name="app_name">First Kotlin App</string>
   <string name="title_activity_main">MainActivity</string>
+  <string name="init_text_view">Hello World!</string>
 </resources>
