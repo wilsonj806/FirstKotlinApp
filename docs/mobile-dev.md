@@ -59,3 +59,33 @@ You'll see two files with this name: one for the project
 Each module has its own build.gradle file, but this project currently
 has just one module. You'll mostly work with the module's build.gradle
 file to configure how the Gradle tools compile and build your app.
+
+## Global Resources
+Mobile dev lets you use XML files to declare global values that can be
+imported into any layout/ view and used.
+
+In this project, resources are in the `app/res/values` directory.
+
+
+The global resources have the below format:
+```xml
+<!-- For Strings -->
+<root>
+<resources>
+  <string name="init_text_view">Hello World!</string>
+</resources>
+
+<!-- For Strings -->
+<resources>
+  <color name="colorNiceGrey">#696969</string>
+</resources>
+</root>
+```
+
+To access them you'd use something the below:
+```xml
+  <TextView
+    android:text="@string/init_text_view"
+    android:textColor="@color/colorNiceGrey"
+    otherProps="Other props below" />
+```
