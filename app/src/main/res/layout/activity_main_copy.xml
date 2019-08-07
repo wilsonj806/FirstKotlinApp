@@ -1,27 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
-  android:id="@+id/ConstraintLayout"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:background="@android:color/background_light"
+  android:background="@color/screenBackground"
   tools:context=".MainActivity">
 
   <android.support.design.widget.AppBarLayout
-    android:id="@+id/appBarLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/design_default_color_primary"
-    android:theme="@style/AppTheme.AppBarOverlay"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+    android:theme="@style/AppTheme.AppBarOverlay">
 
     <android.support.v7.widget.Toolbar
       android:id="@+id/toolbar"
       android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:background="@color/design_default_color_primary"
+      android:layout_height="match_parent"
+      android:background="?attr/colorPrimary"
       app:popupTheme="@style/AppTheme.PopupOverlay"
       app:title="@string/app_head" />
 
@@ -29,15 +24,12 @@
 
   <include
     android:id="@+id/include"
-    layout="@layout/content_main"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content" />
+    layout="@layout/content_main" />
 
   <TextView
     android:id="@+id/textView"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginTop="316dp"
     android:background="@color/design_default_color_primary_dark"
     android:text="@string/init_text_view"
     android:textAlignment="center"
@@ -46,18 +38,14 @@
     android:textStyle="bold"
     android:typeface="serif"
     app:layout_anchor="@+id/include"
-    app:layout_anchorGravity="center"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
+    app:layout_anchorGravity="center" />
 
   <android.support.design.widget.FloatingActionButton
     android:id="@+id/fab"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="8dp"
-    android:layout_marginBottom="8dp"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_gravity="bottom|end"
+    android:layout_margin="@dimen/fab_margin"
     app:srcCompat="@android:drawable/ic_dialog_email" />
 
-</android.support.constraint.ConstraintLayout>
+</android.support.design.widget.CoordinatorLayout>

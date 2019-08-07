@@ -19,6 +19,9 @@ The Component Tree Tab shows the component tree. It's a representation of
 - Note that the Google Codelabs tutorial for building your first Kotlin App
 refers to a `ConstraintLayout`  component, but in the current version of
   ... but here it's the `CoordinatorLayout`
+  - Note that the `CoordinatorLayout` component is the ROOT component
+- Note that you do want to have a `ConstraintLayout` though because your
+  ... components won't be located properly otherwise
 
 The Attributes Tab gives you a list of the various attributes that you can
 modify for a selected element. It should feel familiar if you've ever messed
