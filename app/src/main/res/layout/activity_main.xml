@@ -5,15 +5,16 @@
   android:id="@+id/ConstraintLayout"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:background="@android:color/background_light"
+  android:background="@color/screenBackground"
   tools:context=".MainActivity">
 
   <android.support.design.widget.AppBarLayout
     android:id="@+id/appBarLayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="56dp"
     android:background="@color/design_default_color_primary"
     android:theme="@style/AppTheme.AppBarOverlay"
+    app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
 
@@ -36,28 +37,58 @@
   <TextView
     android:id="@+id/textView"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginTop="316dp"
-    android:background="@color/design_default_color_primary_dark"
+    android:layout_height="98dp"
+    android:layout_marginBottom="8dp"
     android:text="@string/init_text_view"
     android:textAlignment="center"
     android:textColor="@android:color/background_light"
-    android:textSize="36sp"
+    android:textSize="72sp"
     android:textStyle="bold"
-    android:typeface="serif"
+    android:typeface="sans"
     app:layout_anchor="@+id/include"
     app:layout_anchorGravity="center"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent" />
-
-  <android.support.design.widget.FloatingActionButton
-    android:id="@+id/fab"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_marginEnd="8dp"
-    android:layout_marginBottom="8dp"
-    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintBottom_toBottomOf="@+id/include"
     app:layout_constraintEnd_toEndOf="parent"
-    app:srcCompat="@android:drawable/ic_dialog_email" />
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="@+id/include" />
+
+  <Button
+    android:id="@+id/Random"
+    android:layout_width="88dp"
+    android:layout_height="48dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="140dp"
+    android:layout_marginEnd="24dp"
+    android:background="@color/buttonBackground"
+    android:text="@string/random"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.9"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+  <Button
+    android:id="@+id/Count"
+    android:layout_width="88dp"
+    android:layout_height="48dp"
+    android:layout_marginTop="140dp"
+    android:background="@color/buttonBackground"
+    android:text="@string/count"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+  <Button
+    android:id="@+id/Toast"
+    android:layout_width="88dp"
+    android:layout_height="48dp"
+    android:layout_marginStart="24dp"
+    android:layout_marginTop="140dp"
+    android:layout_marginEnd="8dp"
+    android:background="@color/buttonBackground"
+    android:text="@string/toast"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.08"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </android.support.constraint.ConstraintLayout>

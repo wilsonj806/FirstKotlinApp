@@ -1,6 +1,9 @@
 <resources>
   <string name="app_name">First Kotlin App</string>
   <string name="title_activity_main">MainActivity</string>
-  <string name="init_text_view">It do be that way sometimes!</string>
+  <string name="init_text_view">Hello There!</string>
   <string name="app_head">My First Kotlin App</string>
+  <string name="random">Random</string>
+  <string name="count">Count</string>
+  <string name="toast">Toast</string>
 </resources>
