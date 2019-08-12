@@ -8,4 +8,5 @@
   <string name="toast_btn">Toast</string>
   <string name="second_activity_heading">Here is a random number between 0 and %1d</string>
   <string name="return_to_main_activity">Home</string>
+  <string name="random_counter">0</string>
 </resources>
