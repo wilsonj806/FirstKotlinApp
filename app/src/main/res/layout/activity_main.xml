@@ -35,7 +35,7 @@
     android:layout_height="wrap_content" />
 
   <TextView
-    android:id="@+id/textView"
+    android:id="@+id/counterView"
     android:layout_width="wrap_content"
     android:layout_height="98dp"
     android:layout_marginBottom="8dp"
@@ -53,7 +53,7 @@
     app:layout_constraintTop_toTopOf="@+id/include" />
 
   <Button
-    android:id="@+id/Random"
+    android:id="@+id/random"
     android:layout_width="88dp"
     android:layout_height="48dp"
     android:layout_marginStart="8dp"
@@ -64,10 +64,12 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.9"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/textView" />
+    app:layout_constraintTop_toBottomOf="@+id/counterView"
+    android:onClick="randomMe"
+    />
 
   <Button
-    android:id="@+id/Count"
+    android:id="@+id/count"
     android:layout_width="88dp"
     android:layout_height="48dp"
     android:layout_marginTop="140dp"
@@ -75,20 +77,22 @@
     android:text="@string/count"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/textView" />
+    app:layout_constraintTop_toBottomOf="@+id/counterView"
+    android:onClick="countMe" />
 
   <Button
-    android:id="@+id/Toast"
+    android:id="@+id/toast"
     android:layout_width="88dp"
     android:layout_height="48dp"
     android:layout_marginStart="24dp"
     android:layout_marginTop="140dp"
     android:layout_marginEnd="8dp"
     android:background="@color/buttonBackground"
-    android:text="@string/toast"
+    android:text="@string/toast_btn"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintHorizontal_bias="0.08"
     app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toBottomOf="@+id/textView" />
+    app:layout_constraintTop_toBottomOf="@+id/counterView"
+    android:onClick="toastMe" />
 
 </android.support.constraint.ConstraintLayout>

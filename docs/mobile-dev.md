@@ -87,5 +87,67 @@ To access them you'd use something the below:
   <TextView
     android:text="@string/init_text_view"
     android:textColor="@color/colorNiceGrey"
-    otherProps="Other props below" />
+    otherAtributes="Other Attributes below" />
+```
+
+**NOTE:** It is generally best practice to add strings/ colors/ etc that
+won't be accessed by Kotlin as it's own resource in the corresponding XML
+file.
+
+## Connecting Elements To Kotlin
+There's a couple of different ways to connect your Android elements to
+Kotlin.
+
+Given an element with an id value, then you can use the below:
+```kt
+    val showCountTextView = findViewById<TextView>(R.id.counterView)
+```
+
+Where we tell Kotlin that we're selecting a TextView, and the element we
+want to select is `R.id.counterView` where `R` is a dynamically generated
+class that dynamically identifies assets. It basically compiles all your
+XML files in`app/src/main/res`.
+
+This functions similarly to `document.getElementById()` in JavaScript
+
+The other way is to build event handlers and directly attach them to the
+desired element.
+
+Given this function that adds a toast when called:
+```kt
+  fun toastMe(view: View) {
+    // val myToast = Toast.makeText(this, message, duration);
+    val myToast = Toast.makeText(this@MainActivity, "Hello Toast!", Toast.LENGTH_SHORT)
+    myToast.show()
+  }
+```
+
+To attach it to an element we'd need to add an `android:onClick` attribute
+like so:
+```xml
+<Button
+  android:id="@+id/toast"
+  android:text="@string/toast_btn"
+  android:onClick="toastMe" />
+```
+
+## Switching Activities
+Switching between activities requires some Kotlin scripting. So if we
+wanted to switch between activities, our Kotlin would look like this:
+```kt
+fun switchActivity(view: View) {
+  // declare an intent
+  val intent = Intent(this, MyActivity::java)
+  
+  // start the activity identified by the above
+  startActivity(intent)
+}
+```
+
+Then you'd need to link that to your UI somehow. The most basic example
+would be with an onClick handler for a button. This would be done in the
+corresponding XML element like so:
+```xml
+<Button
+  android:onClick="switchActivity" />
 ```
